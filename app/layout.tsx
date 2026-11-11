@@ -33,6 +33,28 @@ export const metadata: Metadata = {
   },
   description:
     "Voltra is a fictional esports organisation: tournaments, roster and merch. A design demo built with Next.js by Rahil Khan.",
+  metadataBase: new URL("https://rahilkhan5.github.io/voltra-esports/"),
+  openGraph: {
+    type: "website",
+    siteName: "Voltra",
+    title: "Voltra · Esports organisation (demo)",
+    description: "Every screen is a printed event pass. Tournaments, brackets, a flippable roster and a merch shop. A design demo by Rahil Khan.",
+    url: "https://rahilkhan5.github.io/voltra-esports/",
+    images: [
+      {
+        url: "https://rahilkhan5.github.io/voltra-esports/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Voltra home page: headline Your pass to the next round beside an all access lanyard badge",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Voltra · Esports organisation (demo)",
+    description: "Every screen is a printed event pass. A design demo by Rahil Khan.",
+    images: ["https://rahilkhan5.github.io/voltra-esports/og.jpg"],
+  },
 };
 
 export const viewport: Viewport = {
