@@ -1,0 +1,271 @@
+@import "tailwindcss";
+
+/* Voltra prints in exactly four tier inks plus laminate white and arena black. */
+@theme {
+  --color-arena: #0f1012;
+  --color-arena-2: #17181c;
+  --color-arena-3: #23242a;
+  --color-laminate: #f4f1ea;
+  --color-laminate-2: #e6e1d4;
+  --color-laminate-dim: #aaa59a;
+  --color-ink: #0f1012;
+  --color-ink-soft: #4a4740;
+  --color-orange: #ff4b1f;
+  --color-volt: #c8f031;
+  --color-cobalt: #2b6cff;
+  --color-amber: #ffb000;
+
+  --font-display: var(--font-big-shoulders), "Arial Narrow", sans-serif;
+  --font-sans: var(--font-archivo), system-ui, sans-serif;
+  --font-mono: var(--font-martian), ui-monospace, monospace;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:root {
+  color-scheme: dark;
+  --gutter: clamp(1rem, 4vw, 3rem);
+}
+
+html {
+  background: var(--color-arena);
+  color: var(--color-laminate);
+  scrollbar-color: var(--color-arena-3) var(--color-arena);
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01";
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-orange);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-volt);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-arena);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-arena-3);
+  border-radius: 10px;
+  border: 2px solid var(--color-arena);
+}
+
+a {
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0.86;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.meta {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 88rem;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Laminated badge stock */
+.laminate {
+  background-color: var(--color-laminate);
+  color: var(--color-ink);
+  box-shadow:
+    0 1px 0 rgb(255 255 255 / 0.6) inset,
+    0 18px 40px -18px rgb(0 0 0 / 0.7),
+    0 2px 6px rgb(0 0 0 / 0.35);
+}
+
+/* Punched lanyard slot */
+.slot {
+  width: 3.25rem;
+  height: 0.7rem;
+  border-radius: 999px;
+  background: var(--color-arena);
+  box-shadow: inset 0 2px 3px rgb(0 0 0 / 0.6);
+}
+
+/* Holographic security foil: used once per page on the decisive element */
+.holo {
+  --hx: 50%;
+  --hy: 50%;
+  --ha: 0deg;
+  background:
+    repeating-linear-gradient(
+      115deg,
+      rgb(255 255 255 / 0) 0 6px,
+      rgb(255 255 255 / 0.28) 6px 7px
+    ),
+    conic-gradient(
+      from var(--ha) at var(--hx) var(--hy),
+      #ff4b1f,
+      #ffb000,
+      #c8f031,
+      #2b6cff,
+      #ff4b1f
+    );
+  background-blend-mode: overlay, normal;
+  filter: saturate(0.9) brightness(1.05);
+}
+.holo-sheen {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    rgb(255 255 255 / 0.55) calc(var(--hx, 50%) - 4%),
+    transparent calc(var(--hx, 50%) + 12%)
+  );
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+/* Perforated tear line between ticket body and stub */
+.perf-v {
+  background-image: radial-gradient(circle, var(--color-arena) 2.5px, transparent 3px);
+  background-size: 8px 12px;
+  background-repeat: repeat-y;
+  background-position: center;
+}
+.perf-h {
+  background-image: radial-gradient(circle, currentColor 1.5px, transparent 2px);
+  background-size: 12px 6px;
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
+/* Ticket notches cut by the arena ground */
+.notch-top,
+.notch-bottom {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--color-arena);
+  left: 50%;
+  translate: -50% 0;
+}
+.notch-top {
+  top: -11px;
+}
+.notch-bottom {
+  bottom: -11px;
+}
+
+/* Two-ink duotone photos */
+.duo-orange {
+  filter: url(#duo-orange);
+}
+.duo-volt {
+  filter: url(#duo-volt);
+}
+.duo-cobalt {
+  filter: url(#duo-cobalt);
+}
+.duo-amber {
+  filter: url(#duo-amber);
+}
+.duo-laminate {
+  filter: url(#duo-laminate);
+}
+
+/* Scanner laser */
+@keyframes scan-sweep {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(120%);
+    opacity: 0;
+  }
+}
+.laser {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.laser::after {
+  content: "";
+  position: absolute;
+  left: -4%;
+  right: -4%;
+  top: 50%;
+  height: 2px;
+  background: var(--color-orange);
+  box-shadow: 0 0 10px 2px rgb(255 75 31 / 0.55);
+  animation: scan-sweep 0.6s var(--ease-out-expo) forwards;
+}
+
+@keyframes live-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+.live-dot {
+  animation: live-blink 1.4s steps(2, jump-none) infinite;
+}
+
+/* Stamp overprint for sold out and void states */
+.stamp {
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 3px solid currentColor;
+  border-radius: 6px;
+  padding: 0.1em 0.45em;
+  transform: rotate(-9deg);
+  mix-blend-mode: multiply;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

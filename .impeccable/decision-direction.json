@@ -1,0 +1,124 @@
+{
+  "title": "Voltra: choose the visual world",
+  "question": "The roll picked 'Event Credential'. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Event Credential",
+      "kicker": "THE ROLL",
+      "lineage": "LAN event lanyard passes, wristbands and tear-off match tickets",
+      "thesis": "Every page is a pass you would wear at a Voltra LAN: badges, tiers, stubs, scans.",
+      "palette": ["#0E0F12", "#F4F1EA", "#FF4B1F", "#2B6CFF", "#C8F031", "#FFB000"],
+      "materials": ["laminated PVC badge stock", "holographic security foil", "perforated ticket stubs", "barcode and serial print"],
+      "viewport": "A giant ALL ACCESS credential hangs from a lanyard strap that drops from the top edge and swings with the cursor; headline and Get your pass action sit beside it.",
+      "risk": "If the badge grammar is applied timidly it reads as a gimmick card on a plain page.",
+      "raised": [
+        { "from": "challenger-kiosk", "raise": "Restricted inks: the whole site prints in four tier inks plus laminate white and arena black, nothing else." },
+        { "from": "challenger-manga", "raise": "Decisive beat: the holographic foil appears once per page, on the one element that matters most." },
+        { "from": "challenger-weather-sun", "raise": "Duotone photos: every Unsplash photo is printed in arena black plus one tier ink, like a badge photo." },
+        { "from": "challenger-emission-rail", "raise": "Match state is line form, not colour: live solid, upcoming dashed, finished struck through." },
+        { "from": "challenger-glaze", "raise": "Pass lifecycle states: issued, scanned, void, each a physical mark on the badge rather than a toast." }
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "Broadcast Package",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "esports stream overlays: scorebugs, lower thirds, caster tickers",
+      "thesis": "The site runs like a live stream graphics package, every section a broadcast slate.",
+      "palette": ["#08090C", "#FFFFFF", "#FF3D2E", "#1E90FF"],
+      "materials": ["broadcast lower-thirds", "scorebug panels", "live ticker crawl"],
+      "viewport": "A full-bleed match slate with a scorebug, team names and a LIVE ticker crawling along the bottom.",
+      "risk": "Familiar: this is close to where most esports sites already land."
+    },
+    {
+      "id": "challenger-splitflap",
+      "label": "Departure Board",
+      "verdict": "competitive",
+      "lineage": "rail concourse split-flap boards",
+      "thesis": "Tournaments and matches flip in like departures on a station board.",
+      "palette": ["#111111", "#F2F2F2", "#FFB000", "#B3261E"],
+      "materials": ["matte flap faces", "brushed steel frame", "amber row lamps"],
+      "viewport": "A giant flap board listing next matches; rows clack into place on load.",
+      "case": "Very clear for schedules and point tables; weaker for players and shop.",
+      "risk": "Strong on the tournaments page, thin everywhere else."
+    },
+    {
+      "id": "challenger-kiosk",
+      "label": "Kiosk Print",
+      "verdict": "declined",
+      "lineage": "state kiosk printed goods in three inks",
+      "thesis": "Merch and matches as matchbox labels in three permitted inks.",
+      "palette": ["#9A9A92", "#D7263D", "#1B998B", "#F4F1EA"],
+      "materials": ["recycled grey board", "off-register ink"],
+      "viewport": "A kiosk grid of product cells, no photography.",
+      "case": "Esports fans and clients do not recognise this world.",
+      "risk": "Reads as an art project, not an esports brand.",
+      "kept": "Restricted ink discipline."
+    },
+    {
+      "id": "challenger-manga",
+      "label": "Manga Page",
+      "verdict": "declined",
+      "lineage": "weekly manga screentone pages",
+      "thesis": "Matches told as manga panels with speed lines.",
+      "palette": ["#111111", "#FFFFFF", "#9E9E9E"],
+      "materials": ["screentone", "speed lines"],
+      "viewport": "A panel grid with the next match as the decisive black panel.",
+      "case": "Gamers like the vibe, but tournaments, shop and stats lose clarity.",
+      "risk": "Shop and point table fight the panel grammar.",
+      "kept": "One decisive beat per page."
+    },
+    {
+      "id": "challenger-glaze",
+      "label": "Glaze Shelf",
+      "verdict": "declined",
+      "lineage": "kiln shelf glaze runs",
+      "thesis": "Results as glaze running down a shelf.",
+      "palette": ["#F4F4F0", "#1F4FA0", "#0B2E6B"],
+      "materials": ["kiln shelf", "cobalt glaze"],
+      "viewport": "A shelf of samples with glaze runs.",
+      "case": "No link to esports for either audience.",
+      "risk": "Confusing for an esports brand.",
+      "kept": "States as physical stages."
+    },
+    {
+      "id": "challenger-weather-sun",
+      "label": "Indoor Sun",
+      "verdict": "declined",
+      "lineage": "installation art, amber haze hall",
+      "thesis": "One amber hall, players as silhouettes.",
+      "palette": ["#E89A2C", "#2A1A08", "#000000"],
+      "materials": ["haze", "mirrored ceiling"],
+      "viewport": "A half sun on the far wall with silhouettes.",
+      "case": "Atmospheric but hides the tournaments and shop.",
+      "risk": "Mood over function.",
+      "kept": "One-ink flattening of photos."
+    },
+    {
+      "id": "challenger-emission-rail",
+      "label": "Emission Rail",
+      "verdict": "declined",
+      "lineage": "spectrogram plates",
+      "thesis": "Everything hangs off one calibrated rail.",
+      "palette": ["#1C1C1E", "#E8E2D6", "#F5C518"],
+      "materials": ["charcoal continuum", "hairline lines"],
+      "viewport": "A single rail with ticks for each page.",
+      "case": "Too abstract for fans and clients.",
+      "risk": "Feels like a lab tool.",
+      "kept": "State carried by line form."
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "code", "toggle": false },
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "Classic esports theme: near-black, one neon accent, angled buttons, glow.",
+    "palette": ["#07090B", "#FFFFFF", "#45F882"],
+    "materials": ["dark arena photos", "angled clip-path buttons", "neon glow"],
+    "viewport": "Dark hero photo, giant uppercase headline, two angled neon buttons.",
+    "risk": "Looks like every esports template, including the one you showed me."
+  },
+  "steer": true
+}
