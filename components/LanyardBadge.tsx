@@ -72,7 +72,7 @@ export function LanyardBadge() {
         {/* Lanyard strap */}
         <div
           aria-hidden="true"
-          className="relative h-[clamp(5rem,12vh,7rem)] w-8 overflow-hidden bg-orange lg:h-[clamp(7rem,24vh,15rem)]"
+          className="relative h-12 w-8 overflow-hidden bg-orange sm:h-[clamp(5rem,12vh,7rem)] lg:h-[clamp(6rem,18vh,11rem)] lg:w-10"
           style={{ boxShadow: "inset 6px 0 8px -6px rgb(0 0 0 / 0.5), inset -6px 0 8px -6px rgb(0 0 0 / 0.5)" }}
         >
           <div className="absolute inset-x-0 top-0 flex flex-col items-center gap-3 pt-2 [writing-mode:vertical-rl]">
@@ -96,25 +96,27 @@ export function LanyardBadge() {
           type="button"
           onClick={flick}
           aria-label={`${event.name} ${event.season} all access pass`}
-          className="laminate relative -mt-3 w-[min(78vw,23.5rem)] cursor-grab rounded-[18px] p-4 text-left active:cursor-grabbing sm:p-5"
+          className="laminate relative -mt-3 w-[min(78vw,23.5rem)] cursor-grab rounded-[18px] p-4 text-left active:cursor-grabbing sm:p-5 lg:w-[min(36vw,31rem)] lg:rounded-[22px] lg:p-7"
         >
-          <div className="slot mx-auto mb-4" />
+          <div className="slot mx-auto mb-3 sm:mb-4 lg:!h-3 lg:!w-16" />
           <div className="flex items-center justify-between">
             <span className="inline-flex items-center gap-2">
-              <VoltraMark size={24} className="text-ink" />
-              <span className="font-display text-xl font-black tracking-wide text-ink uppercase">Voltra</span>
+              <VoltraMark size={24} className="text-ink lg:size-8" />
+              <span className="font-display text-xl font-black tracking-wide text-ink uppercase lg:text-2xl">Voltra</span>
             </span>
-            <span className="meta text-ink-soft">{event.season}</span>
+            <span className="meta text-ink-soft lg:text-xs">{event.season}</span>
           </div>
 
-          <p className="display mt-5 text-[clamp(2.3rem,4.2vw,3.4rem)] text-ink">Invitational</p>
-          <p className="mt-2 text-sm text-ink-soft">
+          <p className="display mt-3 text-[clamp(2.3rem,4.2vw,3.4rem)] text-ink sm:mt-5 lg:text-[clamp(3rem,4.9vw,4.6rem)]">
+            Invitational
+          </p>
+          <p className="mt-2 text-sm text-ink-soft lg:text-base">
             {event.city} · {event.dates}
           </p>
 
           {/* Holographic security strip, the one foil on this page */}
           <motion.div
-            className="holo relative mt-4 h-9 overflow-hidden rounded-md"
+            className="holo relative mt-3 h-7 overflow-hidden rounded-md sm:mt-4 sm:h-9 lg:h-11"
             style={{ ["--hx" as string]: hx, ["--ha" as string]: ha }}
             aria-hidden="true"
           >
@@ -126,16 +128,16 @@ export function LanyardBadge() {
             </div>
           </motion.div>
 
-          <div className="mt-4 rounded-lg bg-orange px-4 py-3 text-ink">
-            <p className="display text-[clamp(2.4rem,4.6vw,3.6rem)]">All access</p>
+          <div className="mt-3 rounded-lg bg-orange px-4 py-3 text-ink sm:mt-4 lg:px-5 lg:py-4">
+            <p className="display text-[clamp(2.4rem,4.6vw,3.6rem)] lg:text-[clamp(3.2rem,5.2vw,5rem)]">All access</p>
           </div>
 
-          <div className="mt-4 flex items-end justify-between gap-4">
+          <div className="mt-4 flex items-end justify-between gap-4 lg:mt-5">
             <div>
               <p className="meta text-ink-soft">Admit one · Hall 3</p>
               <p className="meta tabular mt-1 text-ink">{event.serial}</p>
             </div>
-            <Barcode value={event.serial} height={30} className="h-8 w-28 text-ink" />
+            <Barcode value={event.serial} height={30} className="h-8 w-28 text-ink lg:h-10 lg:w-36" />
           </div>
         </button>
       </motion.div>

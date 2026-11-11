@@ -4,10 +4,10 @@ import { bg, onInk } from "@/lib/ink";
 import { IconArrow, IconCalendar, IconPin } from "./Icons";
 import { Photo } from "./Photo";
 
-const statusLabel = {
-  open: "Registration open",
-  full: "Full, waitlist",
-  live: "Live now",
+export const statusLabel = {
+  open: "Open",
+  full: "Waitlist",
+  live: "Live",
   finished: "Finished",
 } as const;
 
@@ -29,6 +29,16 @@ export function SlotPunches({ total, taken, max = 32 }: { total: number; taken: 
         />
       ))}
     </div>
+  );
+}
+
+/** Status printed on the stub, the way a gate stamps a pass. */
+export function StatusStamp({ status }: { status: Tournament["status"] }) {
+  return (
+    <span className="inline-flex items-center gap-1.5 rounded-md border-2 border-ink px-2 py-0.5 font-display text-lg font-black tracking-wide uppercase">
+      {status === "live" && <span className="live-dot inline-block size-2 rounded-full bg-orange" aria-hidden="true" />}
+      {statusLabel[status]}
+    </span>
   );
 }
 
@@ -68,12 +78,8 @@ export function EventPass({ t, holo = false, priority = false }: { t: Tournament
       <div className="relative p-5 sm:p-6">
         <div className={`pointer-events-none absolute inset-2.5 rounded-lg border-2 border-ink/70 ${rule}`} aria-hidden="true" />
         <div className="relative">
-          <p className="meta inline-flex items-center gap-2 text-ink-soft">
-            {t.status === "live" && <span className="live-dot inline-block size-2 rounded-full bg-orange" aria-hidden="true" />}
-            {statusLabel[t.status]}
-          </p>
           <h3
-            className={`display mt-2 text-[clamp(1.9rem,3.2vw,2.75rem)] ${
+            className={`display text-[clamp(1.9rem,3.2vw,2.75rem)] ${
               t.status === "finished" ? "line-through decoration-[3px]" : ""
             }`}
           >
@@ -81,7 +87,8 @@ export function EventPass({ t, holo = false, priority = false }: { t: Tournament
               {t.name}
             </Link>
           </h3>
-          <p className="mt-2 max-w-[48ch] text-sm leading-relaxed text-ink-soft">{t.summary}</p>
+          <p className="meta mt-2 text-ink-soft">{t.format}</p>
+          <p className="mt-3 max-w-[48ch] text-sm leading-relaxed text-ink-soft">{t.summary}</p>
           <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-1.5 text-sm">
             <li className="inline-flex items-center gap-1.5">
               <IconCalendar size={16} /> {t.dateLabel}
@@ -100,8 +107,9 @@ export function EventPass({ t, holo = false, priority = false }: { t: Tournament
         </div>
       </div>
 
-      <div className="relative flex items-center justify-between gap-4 border-t-2 border-dashed border-ink/25 p-5 sm:w-40 sm:flex-col sm:items-start sm:justify-center sm:border-t-0 sm:border-l-0">
+      <div className="relative flex flex-wrap items-center justify-between gap-4 border-t-2 border-dashed border-ink/25 p-5 sm:w-40 sm:flex-col sm:flex-nowrap sm:items-start sm:justify-center sm:border-t-0">
         <div className="perf-v absolute inset-y-0 -left-1.5 hidden w-3 sm:block" aria-hidden="true" />
+        <StatusStamp status={t.status} />
         <div>
           <p className="meta text-ink-soft">Prize pool</p>
           <p className="font-display text-4xl font-black tabular">{money(t.prizePool)}</p>

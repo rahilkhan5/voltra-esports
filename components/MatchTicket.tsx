@@ -2,7 +2,7 @@ import Link from "next/link";
 import { gameName, team, type Match, type Team } from "@/lib/data";
 import { TeamEmblem } from "./TeamEmblem";
 
-const stateLabel = { live: "Live", upcoming: "Next", finished: "Final" } as const;
+const stateLabel = { live: "Live", upcoming: "Next", finished: "Result" } as const;
 
 /**
  * A match ticket. State is carried by line form, never colour:
@@ -46,8 +46,9 @@ export function MatchTicket({ match }: { match: Match }) {
         <Link
           href={`/tournaments/${match.tournament}/`}
           className="meta rounded-sm underline decoration-ink/40 hover:decoration-ink"
+          aria-label={`Open ${gameName(match.game)} event details`}
         >
-          Event
+          Details
         </Link>
       </div>
     </article>

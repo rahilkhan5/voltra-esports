@@ -31,8 +31,9 @@ export function ReserveSlot({ t }: { t: Tournament }) {
         initial={reduce ? false : { opacity: 0, x: -24, rotate: -7 }}
         animate={{ opacity: 1, x: 0, rotate: -1.5 }}
         transition={{ type: "spring", stiffness: 160, damping: 14 }}
-        className="relative rounded-lg border-2 border-dashed border-ink bg-laminate-2 p-4"
+        className="relative overflow-hidden rounded-lg border-2 border-dashed border-ink bg-laminate-2 p-4 pt-6"
       >
+        <div className="holo absolute inset-x-0 top-0 h-2" aria-hidden="true" />
         <p className="meta text-ink-soft">{waitlist ? "Waitlist stub" : "Slot reserved"} · this browser only</p>
         <p className="mt-1 font-display text-3xl font-black tabular">{existing.code}</p>
         <div className="mt-3 flex items-end justify-between gap-4">
@@ -50,7 +51,8 @@ export function ReserveSlot({ t }: { t: Tournament }) {
   }
 
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 rounded-lg border-2 border-dashed border-ink/30 p-3">
+      <div className="holo h-2 rounded-full" aria-hidden="true" />
       <ScanButton
         onScan={() => reserve(t.slug)}
         className="w-full !min-h-12 text-base"

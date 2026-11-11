@@ -6,19 +6,24 @@ export type Tier = "orange" | "volt" | "cobalt" | "amber";
 export type Game = {
   id: string;
   name: string;
+  code: string;
   genre: string;
 };
 
 export const games: Game[] = [
-  { id: "hexfront", name: "Hexfront", genre: "Tactical shooter" },
-  { id: "skyrift", name: "Skyrift Legends", genre: "MOBA" },
-  { id: "ironfist", name: "Ironfist Arena", genre: "Fighting" },
-  { id: "dropzone", name: "Dropzone 9", genre: "Battle royale" },
-  { id: "pitchkings", name: "Pitch Kings", genre: "Football" },
+  { id: "hexfront", name: "Hexfront", code: "HXF", genre: "Tactical shooter" },
+  { id: "skyrift", name: "Skyrift Legends", code: "SKY", genre: "MOBA" },
+  { id: "ironfist", name: "Ironfist Arena", code: "IRN", genre: "Fighting" },
+  { id: "dropzone", name: "Dropzone 9", code: "DZ9", genre: "Battle royale" },
+  { id: "pitchkings", name: "Pitch Kings", code: "PTK", genre: "Football" },
 ];
 
 export function gameName(id: string) {
   return games.find((g) => g.id === id)?.name ?? id;
+}
+
+export function gameCode(id: string) {
+  return games.find((g) => g.id === id)?.code ?? id.slice(0, 3).toUpperCase();
 }
 
 export type TournamentStatus = "open" | "full" | "live" | "finished";
@@ -335,7 +340,7 @@ export const tournaments: Tournament[] = [
     registered: 8,
     entryFee: 30,
     tier: "orange",
-    photo: "arena-lights",
+    photo: "stage-spotlights",
     summary: "Voltra's own Skyrift squad took the title on home ground, 3 to 1 in the final.",
     winner: "voltra",
     prizes: [
@@ -663,17 +668,6 @@ export const products: Product[] = [
     tier: "amber",
     stock: 9,
     details: "Compact frame, braided cable, tactile bump you can feel at 2am.",
-  },
-  {
-    id: "talon-red",
-    name: "Talon Mouse, Ember",
-    line: "Wired, 62g",
-    category: "Input",
-    price: 49,
-    photo: "g-mouse-red",
-    tier: "orange",
-    stock: 30,
-    details: "The wired Talon in the Ember colourway.",
   },
   {
     id: "pad-controller",

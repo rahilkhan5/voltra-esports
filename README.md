@@ -54,7 +54,7 @@ All photos are from [Unsplash](https://unsplash.com) under the Unsplash License,
 | File | Unsplash photo |
 | --- | --- |
 | arena-crowd | photo-1780766382547-a0ffa16bd32d |
-| arena-lights | photo-1587095951604-b9d924a3fda0 |
+| stage-spotlights | photo-1758979141086-1c32a2885d06 |
 | festival-field | photo-1533174072545-7a4b6ad7a6c3 |
 | lan-dim-room | photo-1758410473735-c76baff30a79 |
 | lan-hall | photo-1633545495735-25df17fb9f31 |
@@ -69,7 +69,6 @@ All photos are from [Unsplash](https://unsplash.com) under the Unsplash License,
 | p-gamer-man | photo-1648736958748-a0978b01da0a |
 | g-headset | photo-1610041321327-b794c052db27 |
 | g-mouse | photo-1615663245857-ac93bb7c39e7 |
-| g-mouse-red | photo-1605773527852-c546a8584ea3 |
 | g-keyboard | photo-1595044426077-d36d9236d54a |
 | g-keyboard-orange | photo-1626958390898-162d3577f293 |
 | g-chair | photo-1770195483917-b3bb444b7a29 |

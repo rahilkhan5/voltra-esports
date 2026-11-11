@@ -17,20 +17,20 @@ export default function Home() {
     <>
       {/* First viewport: the pass */}
       <section aria-labelledby="hero-title" className="relative overflow-hidden">
-        <div className="wrap grid items-start gap-10 pt-10 pb-14 lg:min-h-[min(calc(100dvh-4rem),50rem)] lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-center lg:gap-6 lg:pt-0 lg:pb-16">
+        <div className="wrap grid items-start gap-5 pt-6 pb-12 sm:gap-10 sm:pt-10 lg:min-h-[min(calc(100dvh-4rem),52rem)] lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-center lg:gap-4 lg:pt-0 lg:pb-16">
           <div className="order-1 max-w-[40rem] min-w-0">
-            <h1 id="hero-title" className="display text-[clamp(3.6rem,8.4vw,6rem)]">
+            <h1 id="hero-title" className="display text-[clamp(3.1rem,8.4vw,6rem)]">
               Your pass
               <br />
               to the <span className="text-orange">next</span>
               <br />
               round.
             </h1>
-            <p className="mt-6 max-w-[46ch] text-lg leading-relaxed text-laminate/85">
+            <p className="mt-4 max-w-[46ch] text-base leading-relaxed text-laminate/85 sm:mt-6 sm:text-lg">
               Voltra runs LAN tournaments, fields a roster across five games, and kits out the players who come to beat
               them.
             </p>
-            <p className="meta mt-5 flex flex-wrap gap-x-3 gap-y-1 text-laminate-dim">
+            <p className="meta mt-3 flex flex-wrap gap-x-3 gap-y-1 text-laminate-dim sm:mt-5">
               <span>
                 {event.name} {event.season}
               </span>
@@ -39,7 +39,7 @@ export default function Home() {
               <span aria-hidden="true">/</span>
               <span>{event.dates}</span>
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+            <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-4 sm:mt-8">
               <TicketLink href="/tournaments/voltra-invitational-s04/">Get your pass</TicketLink>
               <Link
                 href="#next"
@@ -50,7 +50,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="order-2 -mt-4 min-w-0 lg:mt-0 lg:self-start">
+          <div className="order-2 -mt-2 min-w-0 lg:mt-0 lg:self-start">
             <LanyardBadge />
           </div>
         </div>
@@ -90,14 +90,25 @@ export default function Home() {
           <div className="wrap">
             <div aria-hidden="true" className="h-1.5 rounded-full bg-arena-3" />
           </div>
-          <ul className="wrap flex snap-x snap-mandatory gap-5 overflow-x-auto pb-6 [scrollbar-width:thin]">
+          <ul
+            className="wrap flex snap-x snap-mandatory gap-5 overflow-x-auto pb-6 [scrollbar-width:thin] [mask-image:linear-gradient(to_right,#000_calc(100%-6rem),transparent)] lg:[mask-image:linear-gradient(to_right,#000_calc(100%-9rem),transparent)]"
+            style={{ scrollPaddingInline: "var(--gutter)" }}
+            aria-label="Roster badges, scroll sideways for more"
+          >
             {players.map((p, i) => (
               <li key={p.id} className="flex w-[15.5rem] shrink-0 snap-start flex-col items-center">
                 <span aria-hidden="true" className={`block w-px bg-laminate-dim ${i % 2 ? "h-10" : "h-6"}`} />
                 <PlayerBadge player={p} className="w-full" />
               </li>
             ))}
+            <li aria-hidden="true" className="w-16 shrink-0 lg:w-28" />
           </ul>
+          <div className="wrap">
+            <p className="meta inline-flex items-center gap-2 text-laminate-dim">
+              Scroll the rail for the full roster
+              <IconArrow size={14} />
+            </p>
+          </div>
         </div>
       </section>
 

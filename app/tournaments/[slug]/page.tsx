@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { SlotPunches } from "@/components/EventPass";
+import { SlotPunches, StatusStamp } from "@/components/EventPass";
 import { IconArrow, IconCalendar, IconPin, IconTrophy, IconUsers } from "@/components/Icons";
 import { Photo } from "@/components/Photo";
 import { TeamEmblem } from "@/components/TeamEmblem";
@@ -55,16 +55,16 @@ export default async function TournamentPage({ params }: { params: Promise<{ slu
         </div>
         <div className="relative flex flex-col p-6 sm:p-9">
           <div className="slot absolute top-4 left-1/2 hidden -translate-x-1/2 lg:block" />
-          <p className="meta inline-flex items-center gap-2 text-ink-soft">
-            {t.status === "live" && <span className="live-dot inline-block size-2 rounded-full bg-orange" aria-hidden="true" />}
-            {statusWord[t.status]} · {t.format}
-          </p>
-          <h1 className="display mt-3 text-[clamp(2.75rem,6vw,5.25rem)] text-ink">{t.name}</h1>
+          <div className="flex items-start justify-between gap-4 lg:mt-4">
+            <h1 className="display text-[clamp(2.75rem,6vw,5.25rem)] text-ink">{t.name}</h1>
+            <span className="mt-1 shrink-0" title={statusWord[t.status]}>
+              <StatusStamp status={t.status} />
+            </span>
+          </div>
+          <p className="meta mt-3 text-ink-soft">{t.format}</p>
           <p className="mt-4 max-w-[52ch] leading-relaxed text-ink-soft">{t.summary}</p>
 
-          <div className="holo relative mt-6 h-3 rounded-full" aria-hidden="true" />
-
-          <dl className="mt-6 grid grid-cols-2 gap-x-6 gap-y-5 text-sm">
+          <dl className="mt-6 grid grid-cols-2 gap-x-6 gap-y-5 border-t-2 border-dashed border-ink/20 pt-6 text-sm">
             <div>
               <dt className="meta inline-flex items-center gap-1.5 text-ink-soft">
                 <IconCalendar size={14} /> Dates
@@ -110,7 +110,7 @@ export default async function TournamentPage({ params }: { params: Promise<{ slu
                 Point table
               </h2>
               <div className="mt-6 overflow-x-auto rounded-xl border border-arena-3">
-                <table className="w-full min-w-[30rem] text-left text-sm tabular">
+                <table className="w-full text-left text-sm tabular">
                   <thead className="bg-arena-2">
                     <tr className="meta text-laminate-dim">
                       <th scope="col" className="px-4 py-3 font-normal">
@@ -119,13 +119,13 @@ export default async function TournamentPage({ params }: { params: Promise<{ slu
                       <th scope="col" className="px-4 py-3 font-normal">
                         Team
                       </th>
-                      <th scope="col" className="px-3 py-3 text-right font-normal">
+                      <th scope="col" className="hidden px-3 py-3 text-right font-normal sm:table-cell">
                         P
                       </th>
-                      <th scope="col" className="px-3 py-3 text-right font-normal">
+                      <th scope="col" className="hidden px-3 py-3 text-right font-normal sm:table-cell">
                         W
                       </th>
-                      <th scope="col" className="px-3 py-3 text-right font-normal">
+                      <th scope="col" className="hidden px-3 py-3 text-right font-normal sm:table-cell">
                         L
                       </th>
                       <th scope="col" className="px-3 py-3 text-right font-normal">
@@ -141,16 +141,16 @@ export default async function TournamentPage({ params }: { params: Promise<{ slu
                       const tm = team(s.team);
                       return (
                         <tr key={s.team} className={`border-t border-arena-3 ${i < 2 ? "" : "text-laminate-dim"}`}>
-                          <td className="px-4 py-3 font-mono">{i + 1}</td>
+                          <td className="py-3 pr-2 pl-4 font-mono">{i + 1}</td>
                           <td className="px-4 py-3">
                             <span className="inline-flex items-center gap-2.5 font-display text-lg font-black uppercase">
                               <TeamEmblem team={tm} size={26} />
                               {tm.name}
                             </span>
                           </td>
-                          <td className="px-3 py-3 text-right">{s.played}</td>
-                          <td className="px-3 py-3 text-right">{s.won}</td>
-                          <td className="px-3 py-3 text-right">{s.lost}</td>
+                          <td className="hidden px-3 py-3 text-right sm:table-cell">{s.played}</td>
+                          <td className="hidden px-3 py-3 text-right sm:table-cell">{s.won}</td>
+                          <td className="hidden px-3 py-3 text-right sm:table-cell">{s.lost}</td>
                           <td className="px-3 py-3 text-right">{s.roundDiff > 0 ? `+${s.roundDiff}` : s.roundDiff}</td>
                           <td className="px-4 py-3 text-right font-display text-xl font-black">{s.points}</td>
                         </tr>
@@ -168,10 +168,10 @@ export default async function TournamentPage({ params }: { params: Promise<{ slu
               <h2 id="bracket-title" className="display text-5xl">
                 Bracket
               </h2>
-              <div className="mt-6 overflow-x-auto pb-2">
-                <div className="flex min-w-max gap-6">
+              <div className="mt-6 sm:overflow-x-auto sm:pb-2">
+                <div className="flex flex-col gap-8 sm:min-w-max sm:flex-row sm:gap-6">
                   {rounds.map((r) => (
-                    <div key={r.round} className="flex w-52 flex-col">
+                    <div key={r.round} className="flex w-full flex-col sm:w-52">
                       <p className="meta mb-3 text-laminate-dim">{r.round}</p>
                       <div className="flex flex-1 flex-col justify-around gap-4">
                         {r.games.map((g, i) => (

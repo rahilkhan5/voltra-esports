@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { gameName, type Player } from "@/lib/data";
+import { gameCode, gameName, type Player } from "@/lib/data";
 import { bg, onInk, tierLabel } from "@/lib/ink";
 import { Barcode } from "./Barcode";
 import { IconFlip, VoltraMark } from "./Icons";
@@ -38,7 +38,9 @@ export function PlayerBadge({
               <VoltraMark size={18} className="text-ink" />
               <span className="font-display text-sm font-extrabold tracking-wide uppercase">Voltra</span>
             </span>
-            <span className="meta text-ink-soft">S04 · {gameName(player.game)}</span>
+            <span className="meta whitespace-nowrap text-ink-soft" title={gameName(player.game)}>
+              S04 · {gameCode(player.game)}
+            </span>
           </div>
           <div className="relative aspect-square overflow-hidden rounded-lg bg-arena">
             <Photo
@@ -67,8 +69,8 @@ export function PlayerBadge({
             <span className="font-display text-2xl font-black tabular">#{player.number}</span>
           </div>
           <div className="mt-2.5 flex items-end justify-between gap-3 px-0.5">
-            <Barcode value={serial} height={26} className="h-6 w-32 text-ink" />
-            <span className="meta tabular text-ink-soft">{serial}</span>
+            <Barcode value={serial} height={26} className="h-6 w-24 min-w-0 shrink text-ink" />
+            <span className="meta tabular shrink-0 whitespace-nowrap text-ink-soft">{serial}</span>
           </div>
           <span className="meta absolute right-3.5 bottom-[4.6rem] inline-flex items-center gap-1 rounded-full bg-ink px-2 py-1 text-laminate opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
             <IconFlip size={12} /> Stats
