@@ -1,0 +1,9 @@
+:HL["/voltra-esports/_next/static/chunks/2d7rr1mw3o_t9.css","style"]
+:HL["/voltra-esports/_next/static/media/38a15c9a0b6aa5e1.p.2l41_ldkjomdb.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/voltra-esports/_next/static/media/72473373e412ffca-s.p.12ukhzf-lem3a.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/voltra-esports/_next/static/media/c6a5c2fdc12da45c-s.p.17-aodiw50953.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/voltra-esports/photos/fps-player.jpg","image"]
+3:[["children",{"s":"__PAGE__","h":160}]]
+2:[["children",{"s":{"n":"slug","t":"d","k":"ironfist-night-cup-18","s":[]},"h":96,"c":"$Q3"}]]
+1:[["children",{"s":"tournaments","h":64,"c":"$Q2"}]]
+0:{"b":"PShbzc1saG2TLSNxjWfsF","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
