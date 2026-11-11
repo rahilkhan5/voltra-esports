@@ -1,0 +1,415 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-11T09:58:01+00:00",
+  "title": "Design System: Voltra",
+  "extensions": {
+    "colorMeta": {
+      "arena": {
+        "role": "neutral",
+        "displayName": "Arena Black",
+        "canonical": "#0f1012",
+        "tonalRamp": [
+          "#1c1e21",
+          "#33363d",
+          "#4f545f",
+          "#6b7280",
+          "#8a919e",
+          "#acb0b9",
+          "#cdd0d5",
+          "#eeeff1"
+        ]
+      },
+      "arena-2": {
+        "role": "neutral",
+        "displayName": "Arena Raised",
+        "canonical": "#17181c",
+        "tonalRamp": [
+          "#1c1d22",
+          "#33353e",
+          "#4e525f",
+          "#6a6e81",
+          "#898e9e",
+          "#abaeba",
+          "#cdced6",
+          "#eeeff1"
+        ]
+      },
+      "arena-3": {
+        "role": "neutral",
+        "displayName": "Arena Rule",
+        "canonical": "#23242a",
+        "tonalRamp": [
+          "#1c1d21",
+          "#33343d",
+          "#4f515f",
+          "#6b6e80",
+          "#8a8d9e",
+          "#acaeb9",
+          "#cdced5",
+          "#eeeff1"
+        ]
+      },
+      "laminate": {
+        "role": "neutral",
+        "displayName": "Laminate White",
+        "canonical": "#f4f1ea",
+        "tonalRamp": [
+          "#282215",
+          "#4a3f27",
+          "#72623c",
+          "#9a8451",
+          "#b5a172",
+          "#cabc9b",
+          "#dfd7c3",
+          "#f4f2eb"
+        ]
+      },
+      "laminate-2": {
+        "role": "neutral",
+        "displayName": "Laminate Back",
+        "canonical": "#e6e1d4",
+        "tonalRamp": [
+          "#272216",
+          "#473f29",
+          "#6e6140",
+          "#948356",
+          "#b0a078",
+          "#c7bb9e",
+          "#ddd6c5",
+          "#f4f2ec"
+        ]
+      },
+      "laminate-dim": {
+        "role": "neutral",
+        "displayName": "Laminate Dim",
+        "canonical": "#aaa59a",
+        "tonalRamp": [
+          "#21201c",
+          "#3d3a33",
+          "#5e594f",
+          "#7f796b",
+          "#9d978b",
+          "#b9b5ac",
+          "#d5d3cd",
+          "#f1f0ee"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Print Ink",
+        "canonical": "#0f1012",
+        "tonalRamp": [
+          "#1c1e21",
+          "#33363d",
+          "#4f545f",
+          "#6b7280",
+          "#8a919e",
+          "#acb0b9",
+          "#cdd0d5",
+          "#eeeff1"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Print Ink Soft",
+        "canonical": "#4a4740",
+        "tonalRamp": [
+          "#211f1c",
+          "#3c3a34",
+          "#5d5950",
+          "#7e796d",
+          "#9c978c",
+          "#b8b5ad",
+          "#d4d2ce",
+          "#f1f0ef"
+        ]
+      },
+      "orange": {
+        "role": "primary",
+        "displayName": "Signal Orange",
+        "canonical": "#ff4b1f",
+        "tonalRamp": [
+          "#3d0c00",
+          "#701600",
+          "#ad2200",
+          "#eb2e00",
+          "#ff5329",
+          "#ff8466",
+          "#ffb5a3",
+          "#ffe6e0"
+        ]
+      },
+      "volt": {
+        "role": "secondary",
+        "displayName": "Volt",
+        "canonical": "#c8f031",
+        "tonalRamp": [
+          "#2e3904",
+          "#546908",
+          "#82a20c",
+          "#b0db10",
+          "#caf037",
+          "#d9f570",
+          "#e8f9a9",
+          "#f7fde2"
+        ]
+      },
+      "cobalt": {
+        "role": "secondary",
+        "displayName": "Cobalt",
+        "canonical": "#2b6cff",
+        "tonalRamp": [
+          "#00133d",
+          "#002270",
+          "#0035ad",
+          "#0048eb",
+          "#296aff",
+          "#6695ff",
+          "#a3bfff",
+          "#e0eaff"
+        ]
+      },
+      "amber": {
+        "role": "tertiary",
+        "displayName": "Amber",
+        "canonical": "#ffb000",
+        "tonalRamp": [
+          "#3d2a00",
+          "#704d00",
+          "#ad7800",
+          "#eba200",
+          "#ffbd29",
+          "#ffd066",
+          "#ffe3a3",
+          "#fff6e0"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page titles and the hero headline, uppercase Big Shoulders 900."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section heads and the tournament detail title."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Pass names, player handles, product names, prices and prize pools."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Ledes and summaries in Archivo, 40ch to 56ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Mono meta, serials, dates, formats and counts, uppercase."
+      }
+    },
+    "shadows": [
+      {
+        "name": "laminate-lift",
+        "value": "0 1px 0 rgb(255 255 255 / 0.6) inset, 0 18px 40px -18px rgb(0 0 0 / 0.7), 0 2px 6px rgb(0 0 0 / 0.35)",
+        "purpose": "Badges, hangtags and the detail pass."
+      },
+      {
+        "name": "pass-lift",
+        "value": "0 18px 40px -20px rgb(0 0 0 / 0.85)",
+        "purpose": "Event passes."
+      },
+      {
+        "name": "ticket-lift",
+        "value": "0 14px 30px -16px rgb(0 0 0 / 0.8)",
+        "purpose": "Match tickets."
+      },
+      {
+        "name": "punch",
+        "value": "inset 0 2px 3px rgb(0 0 0 / 0.6)",
+        "purpose": "Lanyard slots, string holes, selected punch chips."
+      },
+      {
+        "name": "scanner-laser",
+        "value": "0 0 10px 2px rgb(255 75 31 / 0.55)",
+        "purpose": "The scan laser line only; the single permitted light effect."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Badge flip, photo hover zoom, mobile menu, laser sweep."
+      },
+      {
+        "name": "badge-swing",
+        "value": "spring stiffness 90, damping 7, mass 1.1",
+        "purpose": "Hero lanyard badge swing toward the pointer; touch idle sway and tap flick."
+      },
+      {
+        "name": "badge-flip",
+        "value": "700ms ease-out-expo, rotateY 180deg",
+        "purpose": "Player badge front to back."
+      },
+      {
+        "name": "scan-sweep",
+        "value": "600ms ease-out-expo",
+        "purpose": "Laser through a scan button; the Scanned label holds about 1.3s."
+      },
+      {
+        "name": "live-blink",
+        "value": "1.4s steps(2) infinite",
+        "purpose": "Live dot on live matches and events."
+      },
+      {
+        "name": "press",
+        "value": "200ms, scale 0.97 to 0.98",
+        "purpose": "Button and ticket link press."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "xs",
+        "value": "480px"
+      },
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Ticket Stub Link",
+      "kind": "button",
+      "refersTo": "button-ticket",
+      "description": "Primary action printed as a ticket stub with end punches and a dashed tear before the arrow.",
+      "html": "<a class=\"ds-ticket\" href=\"#\"><span class=\"ds-ticket-punch ds-l\"></span><span class=\"ds-ticket-punch ds-r\"></span><span class=\"ds-ticket-label\">Get your pass</span><span class=\"ds-ticket-tear\"></span><span class=\"ds-ticket-arrow\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a>",
+      "css": ".ds-ticket { position: relative; display: inline-flex; align-items: stretch; min-height: 52px; overflow: hidden; border-radius: 6px; background: #ff4b1f; color: #0f1012; font-family: Archivo, system-ui, sans-serif; font-weight: 600; text-decoration: none; transition: background-color 0.2s, transform 0.2s; } .ds-ticket:hover { background: #ff6a43; } .ds-ticket:active { transform: scale(0.98); } .ds-ticket:focus-visible { outline: 2px solid #c8f031; outline-offset: 3px; } .ds-ticket-punch { position: absolute; top: 50%; width: 16px; height: 16px; border-radius: 999px; background: #0f1012; transform: translateY(-50%); } .ds-l { left: -8px; } .ds-r { right: -8px; } .ds-ticket-label { display: flex; align-items: center; padding: 12px 16px 12px 24px; font-size: 16px; } .ds-ticket-tear { margin: 8px 0; width: 0; border-left: 2px dashed rgb(15 16 18 / 0.4); } .ds-ticket-arrow { display: flex; align-items: center; padding: 0 20px 0 14px; transition: transform 0.3s; } .ds-ticket:hover .ds-ticket-arrow { transform: translateX(4px); }"
+    },
+    {
+      "name": "Scan Button",
+      "kind": "button",
+      "refersTo": "button-scan",
+      "description": "Add to cart and slot reservation. A laser sweeps through on press, then it reads Scanned.",
+      "html": "<div style=\"display:flex;gap:12px;flex-wrap:wrap\"><button class=\"ds-scan\" type=\"button\">Add to cart</button><button class=\"ds-scan\" type=\"button\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12l5 5L20 7\"/></svg> Added to cart</button><button class=\"ds-scan ds-scan-ink\" type=\"button\">Reserve a slot</button><button class=\"ds-scan\" type=\"button\" disabled>Sold out</button></div>",
+      "css": ".ds-scan { position: relative; overflow: hidden; display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px; padding: 0 16px; border: 0; border-radius: 6px; background: #ff4b1f; color: #0f1012; font-family: Archivo, system-ui, sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; transition: background-color 0.2s, transform 0.2s; } .ds-scan:hover { background: #ff6a43; } .ds-scan:active { transform: scale(0.97); } .ds-scan:focus-visible { outline: 2px solid #c8f031; outline-offset: 3px; } .ds-scan:disabled { opacity: 0.45; cursor: not-allowed; } .ds-scan-ink { background: #0f1012; color: #f4f1ea; box-shadow: inset 0 0 0 1px #23242a; } .ds-scan-ink:hover { background: #23242a; } .ds-scan::after { content: ''; position: absolute; left: -4%; right: -4%; top: 50%; height: 2px; background: #ff4b1f; box-shadow: 0 0 10px 2px rgb(255 75 31 / 0.55); opacity: 0; } .ds-scan:active::after { opacity: 1; animation: ds-sweep 0.6s cubic-bezier(0.16,1,0.3,1) forwards; } @keyframes ds-sweep { from { transform: translateY(-1200%); } to { transform: translateY(1200%); } }"
+    },
+    {
+      "name": "Punch Filter",
+      "kind": "chip",
+      "refersTo": "chip-punch",
+      "description": "Radio filter row; the selected option gets a punched hole.",
+      "html": "<div class=\"ds-punchrow\" role=\"radiogroup\" aria-label=\"Game\"><button class=\"ds-punch\" role=\"radio\" aria-checked=\"true\"><span class=\"ds-hole\"></span>All games<span class=\"ds-count\">8</span></button><button class=\"ds-punch\" role=\"radio\" aria-checked=\"false\"><span class=\"ds-hole\"></span>Hexfront<span class=\"ds-count\">2</span></button><button class=\"ds-punch\" role=\"radio\" aria-checked=\"false\"><span class=\"ds-hole\"></span>Pitch Kings<span class=\"ds-count\">1</span></button></div>",
+      "css": ".ds-punchrow { display: flex; flex-wrap: wrap; gap: 8px; padding: 16px; background: #0f1012; } .ds-punch { display: inline-flex; align-items: center; gap: 10px; min-height: 40px; padding: 8px 14px 8px 12px; border: 1px solid #23242a; border-radius: 6px; background: #17181c; color: #f4f1ea; font-family: Archivo, system-ui, sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; transition: border-color 0.2s, background-color 0.2s, color 0.2s; } .ds-punch:hover { border-color: #aaa59a; } .ds-punch:focus-visible { outline: 2px solid #c8f031; outline-offset: 3px; } .ds-hole { width: 10px; height: 10px; border-radius: 999px; border: 1px solid #aaa59a; } .ds-count { font-family: 'Martian Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #aaa59a; } .ds-punch[aria-checked='true'] { background: #f4f1ea; color: #0f1012; border-color: #f4f1ea; } .ds-punch[aria-checked='true'] .ds-hole { background: #0f1012; border-color: #0f1012; box-shadow: inset 0 1px 2px rgb(0 0 0 / 0.7); } .ds-punch[aria-checked='true'] .ds-count { color: #4a4740; }"
+    },
+    {
+      "name": "Site Header",
+      "kind": "nav",
+      "refersTo": "nav-header",
+      "description": "Sticky arena header with orange mark, display wordmark, current page underline and cart pill.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-brand\" href=\"#\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"#ff4b1f\" d=\"M12 1.5 21.5 7v10L12 22.5 2.5 17V7z\"/></svg>Voltra</a><nav class=\"ds-links\"><a href=\"#\" aria-current=\"page\">Tournaments</a><a href=\"#\">Players</a><a href=\"#\">Shop</a></nav><a class=\"ds-cart\" href=\"#\">Cart <span class=\"ds-cart-n\">2</span></a></header>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; height: 64px; padding: 0 24px; background: rgb(15 16 18 / 0.92); border-bottom: 1px solid #23242a; } .ds-brand { display: inline-flex; align-items: center; gap: 10px; color: #f4f1ea; text-decoration: none; font-family: 'Big Shoulders', 'Arial Narrow', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 24px; letter-spacing: 0.025em; } .ds-links { display: flex; gap: 4px; } .ds-links a { position: relative; padding: 8px 14px; color: #aaa59a; text-decoration: none; font-family: Archivo, system-ui, sans-serif; font-size: 15px; font-weight: 500; border-radius: 6px; transition: color 0.2s; } .ds-links a:hover, .ds-links a[aria-current='page'] { color: #f4f1ea; } .ds-links a[aria-current='page']::after { content: ''; position: absolute; left: 14px; right: 14px; bottom: -13px; height: 3px; border-radius: 2px 2px 0 0; background: #ff4b1f; } .ds-links a:focus-visible, .ds-cart:focus-visible { outline: 2px solid #c8f031; outline-offset: 3px; } .ds-cart { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 6px 0 14px; border: 1px solid #23242a; border-radius: 999px; background: #17181c; color: #f4f1ea; text-decoration: none; font-family: Archivo, system-ui, sans-serif; font-size: 14px; font-weight: 500; } .ds-cart:hover { border-color: #aaa59a; } .ds-cart-n { display: grid; place-items: center; min-width: 28px; height: 28px; border-radius: 999px; background: #ff4b1f; color: #0f1012; font-family: 'Martian Mono', monospace; font-size: 12px; }"
+    },
+    {
+      "name": "Player Badge",
+      "kind": "card",
+      "refersTo": "card-badge",
+      "description": "Laminate credential with lanyard slot, portrait window, display handle, tier band and serial.",
+      "html": "<div class=\"ds-badge-ground\"><article class=\"ds-badge\"><div class=\"ds-slot\"></div><div class=\"ds-badge-top\"><span class=\"ds-word\">Voltra</span><span class=\"ds-meta\">S04 · HXF</span></div><div class=\"ds-portrait\"></div><p class=\"ds-handle\">Kestrel</p><p class=\"ds-sub\">Demo player · Entry</p><div class=\"ds-band\"><span>Player</span><span>#07</span></div><div class=\"ds-badge-foot\"><span class=\"ds-bars\"></span><span class=\"ds-meta\">VLT-07-KEST</span></div></article></div>",
+      "css": ".ds-badge-ground { padding: 24px; background: #0f1012; } .ds-badge { width: 240px; padding: 12px; border-radius: 14px; background: #f4f1ea; color: #0f1012; box-shadow: 0 1px 0 rgb(255 255 255 / 0.6) inset, 0 18px 40px -18px rgb(0 0 0 / 0.7), 0 2px 6px rgb(0 0 0 / 0.35); transition: transform 0.7s cubic-bezier(0.16,1,0.3,1); } .ds-badge:hover { transform: perspective(1400px) rotateY(10deg); } .ds-slot { width: 52px; height: 11px; margin: 2px auto 12px; border-radius: 999px; background: #0f1012; box-shadow: inset 0 2px 3px rgb(0 0 0 / 0.6); } .ds-badge-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; } .ds-word { font-family: 'Big Shoulders', 'Arial Narrow', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 14px; } .ds-meta { font-family: 'Martian Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #4a4740; } .ds-portrait { aspect-ratio: 1; border-radius: 8px; background: #0f1012; } .ds-handle { margin: 12px 0 0; font-family: 'Big Shoulders', 'Arial Narrow', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 40px; line-height: 0.86; letter-spacing: -0.01em; } .ds-sub { margin: 6px 0 0; font-family: Archivo, system-ui, sans-serif; font-size: 14px; color: #4a4740; } .ds-band { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; padding: 8px 12px; border-radius: 6px; background: #c8f031; color: #0f1012; font-family: 'Big Shoulders', 'Arial Narrow', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 18px; } .ds-badge-foot { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 10px; } .ds-bars { width: 96px; height: 24px; background: repeating-linear-gradient(90deg, #0f1012 0 2px, transparent 2px 4px, #0f1012 4px 5px, transparent 5px 8px); }"
+    },
+    {
+      "name": "Match Ticket",
+      "kind": "card",
+      "refersTo": "card-match-ticket",
+      "description": "Compact ticket: inset rule whose line form shows state (solid live, dashed next, dimmed and struck result), perforated stub with notches.",
+      "html": "<div class=\"ds-tix-stack\"><article class=\"ds-tix\"><div class=\"ds-tix-body\"><p class=\"ds-tmeta\">Hexfront · Semifinal</p><p class=\"ds-team\">Voltra <b>2</b></p><p class=\"ds-team\">Nightjar <b>1</b></p><p class=\"ds-tmeta\">Now · Hall 3</p></div><div class=\"ds-perf\"><span class=\"ds-n ds-nt\"></span><span class=\"ds-n ds-nb\"></span></div><div class=\"ds-stub\"><span class=\"ds-dot\"></span>Live</div></article><article class=\"ds-tix\"><div class=\"ds-tix-body ds-next\"><p class=\"ds-tmeta\">Skyrift · Groups</p><p class=\"ds-team\">Voltra</p><p class=\"ds-team\">Basilisk</p><p class=\"ds-tmeta\">Sat 14:00</p></div><div class=\"ds-perf\"><span class=\"ds-n ds-nt\"></span><span class=\"ds-n ds-nb\"></span></div><div class=\"ds-stub\">Next</div></article><article class=\"ds-tix\"><div class=\"ds-tix-body ds-done\"><p class=\"ds-tmeta\">Pitch Kings · Final</p><p class=\"ds-team\">Voltra <b>3</b></p><p class=\"ds-team ds-dim\">Orca <b>1</b></p><p class=\"ds-tmeta ds-struck\">2 Nov</p></div><div class=\"ds-perf\"><span class=\"ds-n ds-nt\"></span><span class=\"ds-n ds-nb\"></span></div><div class=\"ds-stub\">Result</div></article></div>",
+      "css": ".ds-tix-stack { display: flex; flex-direction: column; gap: 20px; padding: 20px; background: #0f1012; } .ds-tix { display: flex; width: 380px; border-radius: 12px; background: #e6e1d4; color: #0f1012; box-shadow: 0 14px 30px -16px rgb(0 0 0 / 0.8); } .ds-tix-body { position: relative; flex: 1; padding: 20px; } .ds-tix-body::before { content: ''; position: absolute; inset: 8px; border: 2px solid rgb(15 16 18 / 0.8); border-radius: 8px; pointer-events: none; } .ds-next::before { border-style: dashed; } .ds-done::before { opacity: 0.6; } .ds-dim { opacity: 0.55; } .ds-struck { text-decoration: line-through; } .ds-tmeta { margin: 0; font-family: 'Martian Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #4a4740; } .ds-team { display: flex; justify-content: space-between; margin: 8px 0; font-family: 'Big Shoulders', 'Arial Narrow', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 26px; line-height: 1; } .ds-perf { position: relative; width: 12px; background-image: radial-gradient(circle, #0f1012 2.5px, transparent 3px); background-size: 8px 12px; background-repeat: repeat-y; background-position: center; } .ds-n { position: absolute; left: 50%; width: 22px; height: 22px; border-radius: 999px; background: #0f1012; transform: translateX(-50%); } .ds-nt { top: -11px; } .ds-nb { bottom: -11px; } .ds-stub { display: flex; align-items: center; justify-content: center; gap: 6px; width: 96px; font-family: 'Big Shoulders', 'Arial Narrow', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 24px; } .ds-dot { width: 10px; height: 10px; border-radius: 999px; background: #ff4b1f; animation: ds-blink 1.4s steps(2, jump-none) infinite; } @keyframes ds-blink { 50% { opacity: 0.25; } }"
+    },
+    {
+      "name": "Status Stamp",
+      "kind": "custom",
+      "refersTo": "card-event-pass",
+      "description": "Gate stamp printed beside or below a pass name, never above it as an eyebrow. The tilted variant marks sold out.",
+      "html": "<div class=\"ds-stamps\"><span class=\"ds-stamp\"><span class=\"ds-dot2\"></span>Live</span><span class=\"ds-stamp\">Open</span><span class=\"ds-stamp\">Waitlist</span><span class=\"ds-stamp\">Finished</span><span class=\"ds-void\">Sold out</span></div>",
+      "css": ".ds-stamps { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 20px; background: #f4f1ea; color: #0f1012; } .ds-stamp { display: inline-flex; align-items: center; gap: 6px; padding: 2px 8px; border: 2px solid #0f1012; border-radius: 6px; font-family: 'Big Shoulders', 'Arial Narrow', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 18px; letter-spacing: 0.025em; } .ds-dot2 { width: 8px; height: 8px; border-radius: 999px; background: #ff4b1f; } .ds-void { font-family: 'Big Shoulders', 'Arial Narrow', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 28px; letter-spacing: 0.04em; color: #ff4b1f; border: 3px solid currentColor; border-radius: 6px; padding: 0.1em 0.45em; transform: rotate(-9deg); mix-blend-mode: multiply; }"
+    },
+    {
+      "name": "Holographic Foil Strip",
+      "kind": "custom",
+      "refersTo": "card-badge",
+      "description": "The single foil per view, with microprint. The only gradient in the system.",
+      "html": "<div class=\"ds-foil\"><div class=\"ds-sheen\"></div><div class=\"ds-micro\">Genuine · Voltra · S04 &nbsp; Genuine · Voltra · S04 &nbsp; Genuine · Voltra · S04</div></div>",
+      "css": ".ds-foil { position: relative; width: 320px; height: 36px; overflow: hidden; border-radius: 6px; background: repeating-linear-gradient(115deg, rgb(255 255 255 / 0) 0 6px, rgb(255 255 255 / 0.28) 6px 7px), conic-gradient(from 30deg at 50% 150%, #ff4b1f, #ffb000, #c8f031, #2b6cff, #ff4b1f); background-blend-mode: overlay, normal; filter: saturate(0.9) brightness(1.05); } .ds-sheen { position: absolute; inset: 0; background: linear-gradient(105deg, transparent 30%, rgb(255 255 255 / 0.55) 34%, transparent 50%); mix-blend-mode: soft-light; transition: transform 0.6s cubic-bezier(0.16,1,0.3,1); } .ds-foil:hover .ds-sheen { transform: translateX(40%); } .ds-micro { position: absolute; inset: 0; display: flex; align-items: center; padding: 0 12px; white-space: nowrap; font-family: 'Martian Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: rgb(15 16 18 / 0.6); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Event Credential",
+    "overview": "Every surface is something you would hold at a LAN: a laminated pass on a lanyard, a perforated match ticket, a merch hangtag on a string. The site is an arena-black ground on which laminate-white objects are the only bright things. Nothing floats as an abstract card; each container is a printed object with the marks of its making: a punched lanyard slot, a full-width tier band, a mono serial and a barcode, a perforated tear with notches cut by the ground, a string hole.\n\nThe system is restricted print. Four tier inks, laminate white and arena black make up the whole palette, photos included, because every photo passes through a two-ink duotone filter. Holographic security foil is the single exception to flat ink, and it appears once per view on the decisive element. Motion follows the same physical logic: things hang, swing, flip, tear and get scanned.\n\nThe world explicitly rejects the esports category default: a dark hero photo, one neon accent, angled clip-path buttons and glow.",
+    "keyCharacteristics": [
+      "Arena-black ground, laminate-white printed objects, four tier inks and nothing else.",
+      "State is carried by line form (solid, dashed, dotted, struck), never by colour alone.",
+      "One holographic foil per view, always on the decisive element.",
+      "Every photo is a two-ink duotone printed through the shared SVG filters.",
+      "Heavy condensed uppercase display, plain grotesque text, mono for serials and meta.",
+      "Motion is physical: spring swing, card flip, laser scan, tear line."
+    ],
+    "rules": [
+      {
+        "name": "The Four Inks Rule",
+        "body": "The site prints in orange, volt, cobalt and amber plus laminate and arena. No fifth hue, no tints of a tier ink used as a new colour. Each ink keeps its fixed text partner: ink on orange, volt and amber; laminate on cobalt.",
+        "section": "colors"
+      },
+      {
+        "name": "The Duotone Rule",
+        "body": "Every photo is printed through the shared duotone filters: event, venue and product photos in arena black plus the item's tier ink, ID portraits in arena black plus laminate. A raw full-colour photo never ships, and no photo shows a real brand mark, team logo or sponsor.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Foil Rule",
+        "body": "The holographic foil is the only gradient in the system and appears once per view, on the decisive element: the hero ALL ACCESS badge, the flagship event pass, the captain's badge, the season pass product, or the reservation stub.",
+        "section": "colors"
+      },
+      {
+        "name": "The Stamp Not Eyebrow Rule",
+        "body": "Status is printed as a stamp beside or below the name it belongs to, the way a gate stamps a pass. Nothing sits above a heading as a small label introducing it.",
+        "section": "typography"
+      },
+      {
+        "name": "The Serial Rule",
+        "body": "Anything a machine would print (serials, dates, counts, formats, receipt numbers) is set in the mono label style with tabular figures.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Glow Rule",
+        "body": "No coloured glow on text, buttons or cards. The one lit thing is the scanner laser, a two-pixel orange line that sweeps across a scan button for 0.6s, because a scanner beam is a native device of this world.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do show state by line form: solid for live, dashed for open or upcoming, dotted for full or waitlist, struck through and dimmed for finished.",
+      "Do print status as a stamp (2px ink border, display type) beside or below the name it belongs to.",
+      "Do run every photo through the duotone filters: tier ink for events and products, laminate for portraits.",
+      "Do give each laminate object its physical marks: lanyard slot, tier band, mono serial, barcode, perforation or string hole.",
+      "Do keep the holographic foil to one element per view, the decisive one.",
+      "Do pair each tier ink with its fixed text colour: ink on orange, volt and amber, laminate on cobalt.",
+      "Do honour reduced motion: the badge stops swinging and animations collapse to an instant change."
+    ],
+    "donts": [
+      "Don't use colour alone to signal match or event state.",
+      "Don't put a small label above a heading as an eyebrow or kicker.",
+      "Don't add a fifth hue, a tint of a tier ink as a new colour, or any gradient other than the foil.",
+      "Don't use coloured glow, neon, angled clip-path buttons or a dark full-bleed hero photo.",
+      "Don't show a photo in full colour or one containing a real brand mark, team logo or sponsor.",
+      "Don't place more than one foil in a single view."
+    ]
+  }
+}
