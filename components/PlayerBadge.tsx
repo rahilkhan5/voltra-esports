@@ -56,7 +56,7 @@ export function PlayerBadge({
             <p className="display text-[clamp(2.25rem,4.2vw,3.25rem)] text-ink">{player.handle}</p>
             <p className="mt-1.5 text-sm text-ink-soft">
               {player.name} · {player.role}
-              {player.captain ? " · Captain" : ""}
+              {player.captain && player.role !== "Captain" ? " · Captain" : ""}
             </p>
           </div>
           <div
