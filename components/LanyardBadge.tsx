@@ -75,9 +75,9 @@ export function LanyardBadge() {
           className="relative h-12 w-8 overflow-hidden bg-orange sm:h-[clamp(5rem,12vh,7rem)] lg:h-[clamp(6rem,18vh,11rem)] lg:w-10"
           style={{ boxShadow: "inset 6px 0 8px -6px rgb(0 0 0 / 0.5), inset -6px 0 8px -6px rgb(0 0 0 / 0.5)" }}
         >
-          <div className="absolute inset-x-0 top-0 flex flex-col items-center gap-3 pt-2 [writing-mode:vertical-rl]">
+          <div className="absolute inset-x-0 top-0 flex flex-col items-center gap-3 pt-2">
             {Array.from({ length: 6 }).map((_, i) => (
-              <span key={i} className="font-display text-sm font-black tracking-[0.2em] text-ink uppercase">
+              <span key={i} className="font-display text-sm font-black tracking-[0.2em] text-ink uppercase [writing-mode:vertical-rl]">
                 Voltra
               </span>
             ))}
@@ -134,10 +134,10 @@ export function LanyardBadge() {
 
           <div className="mt-4 flex items-end justify-between gap-4 lg:mt-5">
             <div>
-              <p className="meta text-ink-soft">Admit one · Hall 3</p>
-              <p className="meta tabular mt-1 text-ink">{event.serial}</p>
+              <p className="meta whitespace-nowrap text-ink-soft">Admit one · Hall 3</p>
+              <p className="meta tabular mt-1 whitespace-nowrap text-ink">{event.serial}</p>
             </div>
-            <Barcode value={event.serial} height={30} className="h-8 w-28 text-ink lg:h-10 lg:w-36" />
+            <Barcode value={event.serial} height={30} className="h-8 w-24 shrink-0 text-ink sm:w-28 lg:h-10 lg:w-36" />
           </div>
         </button>
       </motion.div>
